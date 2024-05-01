@@ -1,0 +1,46 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-facebook {
+  width: 24px;
+  height: 24px;
+  background-position: 0 0;
+}
+.icon-home {
+  width: 24px;
+  height: 24px;
+  background-position: -40px 0;
+}
+.icon-image {
+  width: 24px;
+  height: 24px;
+  background-position: -80px 0;
+}
+.icon-instagram {
+  width: 24px;
+  height: 24px;
+  background-position: -120px 0;
+}
+.icon-list {
+  width: 24px;
+  height: 24px;
+  background-position: -160px 0;
+}
+.icon-phone {
+  width: 24px;
+  height: 24px;
+  background-position: -200px 0;
+}
+.icon-send {
+  width: 24px;
+  height: 24px;
+  background-position: -240px 0;
+}
+.icon-x-circle {
+  width: 24px;
+  height: 24px;
+  background-position: -280px 0;
+}
+

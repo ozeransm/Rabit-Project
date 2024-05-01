@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>soft toys rabbits</title>
+    <title>soft toys bunnies</title>
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,26 +11,121 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Jacquarda+Bastarda+9+Charted&family=Pacifico&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.13.0/simple-lightbox.min.css"
+        integrity="sha512-74F0rBF7EW+3OTwz2fa2b9sGBEPSe4orL76WxHMnuVtlYF9h2+WiycMvMWn+nC0SZ5sNcIzhbBHiNneZ6f8ZFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <header class="head-con container">
-        <img src="./img/Logo.jpg" alt="Logo" width="250px">
+        <img class="logo-img" src="./img/Logo.jpg" alt="Logo" width="300px" height="45px">
         <div class="div-btn">
-            <button class="btn-menu">Contacts</button>
-            <button class="btn-menu">Order</button>
-            <button class="btn-menu">Galery</button>
+            <button class="btn-menu">
+                <svg class="btn-svg">
+                    <use href="./img/sprite.svg#icon-home"></use>
+                </svg>
+                Contacts
+            </button>
+            <button class="btn-menu">
+                <svg class="btn-svg">
+                    <use href="./img/sprite.svg#icon-list"></use>
+                </svg>
+                Order
+            </button>
+            <button class="btn-menu">
+                <svg class="btn-svg">
+                    <use href="./img/sprite.svg#icon-image"></use>
+                </svg>
+                Galery
+            </button>
         </div>
     </header>
     <section class="summary-font container">
         <div class="summary-div">
-            <img class="summary-img" src="./img/MyCollages.jpg" alt="summer">
             <h1 class="summary-text">In sale are soft toys of our own design and production.</h1>
+            <img class="summary-img" src="./img/MyCollages.jpg" alt="summer">
 
         </div>
         
     </section>
     <footer class="foot-con container">
-        <img src="./img/footer.jpg" alt="footer-logo" width="120px">
+        <img src="./img/Logo.jpg" alt="Logo" width="250px" height="35px">
+        <svg class="footer-contact">
+            <use href="./img/sprite.svg#icon-send"></use>
+        </svg>
+        <svg class="footer-contact">
+            <use href="./img/sprite.svg#icon-facebook"></use>
+        </svg>
+        <svg class="footer-contact">
+            <use href="./img/sprite.svg#icon-instagram"></use>
+        </svg>
     </footer>
+
+    <div class="modal visually-hidden">
+        <div class="modal-win">
+            <svg class="modal-svg-x">
+                <use href="./img/sprite.svg#icon-x-circle" ></use>
+            </svg>
+            <div class="div-modal-contact visually-hidden">
+                <h2 class="modal-contact-title">Contacts:</h2>
+                <ul>
+                    <li>
+                        <svg class="footer-contact">
+                            <use href="./img/sprite.svg#icon-send"></use>
+                        </svg>
+                        Telegram
+                    </li>
+                    <li>
+                        <svg class="footer-contact">
+                            <use href="./img/sprite.svg#icon-facebook"></use>
+                        </svg>
+                        Facebook
+                    </li>
+                    <li>
+                        <svg class="footer-contact">
+                            <use href="./img/sprite.svg#icon-instagram"></use>
+                        </svg>
+                        Instagram
+                    </li>
+                </ul>
+                 
+                
+            </div>
+            <div class="div-modal-order visually-hidden">
+                btn-order
+            </div>
+            <div class="div-modal-galery visually-hidden">
+                btn-galery
+                <div class="gallery">
+                    <a class="gallery__link" href="./img/galery/1714463088166.jpg"><img class="gallery__image"
+                            src="./img/galery/1714463088166.jpg" alt="examle photo" title="" /></a>
+                    <a class="gallery__link" href="./img/galery/1714463088169.jpg"><img class="gallery__image"
+                            src="./img/galery/1714463088169.jpg" alt="examle photo" title="" /></a>
+                    <a class="gallery__link" href="./img/galery/1714463088171.jpg"><img class="gallery__image"
+                            src="./img/galery/1714463088171.jpg" alt="examle photo"
+                            title="" /></a>
+                    <a class="gallery__link" href="./img/galery/1714463088173.jpg"><img class="gallery__image"
+                            src="./img/galery/1714463088173.jpg" alt="examle photo" title="" /></a>
+                    <a class="gallery__link" href="./img/galery/1714463088178.jpg"><img class="gallery__image"
+                            src="./img/galery/1714463088178.jpg" alt="examle photo" title="" /></a>
+                    <a class="gallery__link" href="./img/galery/1714463088180.jpg"><img class="gallery__image"
+                            src="./img/galery/1714463088180.jpg" alt="examle photo" title="" /></a>
+                    <a class="gallery__link" href="./img/galery/1714463088182.jpg"><img class="gallery__image"
+                            src="./img/galery/1714463088182.jpg" alt="examle photo" title="" /></a>
+                    <a class="gallery__link" href="./img/galery/1714463088185.jpg"><img class="gallery__image"
+                            src="./img/galery/1714463088185.jpg" alt="examle photo" title="" /></a>
+                    
+                </div>
+
+
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.13.0/simple-lightbox.min.js"
+        integrity="sha512-va85zLd+1szc8k3CyJ26pBSluqH+c3H+SOf4cBWhpHFU3ZI331gE6nqLUIm0kd1e0HcZq5YYwdHuSed8IhACAA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="index.js"></script>
+
 </body>
 </html>
