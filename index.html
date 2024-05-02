@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.13.0/simple-lightbox.min.css"
         integrity="sha512-74F0rBF7EW+3OTwz2fa2b9sGBEPSe4orL76WxHMnuVtlYF9h2+WiycMvMWn+nC0SZ5sNcIzhbBHiNneZ6f8ZFQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <header class="head-con container">
@@ -104,7 +104,39 @@
                 
             </div>
             <div class="div-modal-order visually-hidden">
-                btn-order
+                <div class="initswiper">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            Slide 1
+                            <img class="sw-img" src="./img/galery/1714463088171.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            Slide 2
+                            <img class="sw-img" src="./img/galery/1714463088173.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            Slide 3
+                            <img class="sw-img" src="./img/galery/1714463088180.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                </div>
+                <div class="order-description">
+                    <h3>Description:</h3>
+                </div>
             </div>
             <div class="div-modal-galery visually-hidden">
                 <h2>Galery</h2>
@@ -138,6 +170,7 @@
         integrity="sha512-va85zLd+1szc8k3CyJ26pBSluqH+c3H+SOf4cBWhpHFU3ZI331gE6nqLUIm0kd1e0HcZq5YYwdHuSed8IhACAA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </body>
 </html>
