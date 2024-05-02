@@ -16,22 +16,26 @@ img{
     width: 24px;
     height: 24px;
     position: absolute;
-    fill: grey;
+    color: dimgrey;
+  
 }
 .modal-svg-x:hover{
-    fill: dimgrey;
+    color: gray;
    
 }
 .btn-svg{
     width: 20px;
     height: 20px;
     fill: blue;
+    color: blue;
 }
+
 .footer-contact{
     margin-left: 30px;
     width: 24px;
     height: 24px;
     fill: blue;
+    color: blue;
 }
 .visually-hidden {
     position: absolute;
@@ -103,9 +107,24 @@ img{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(211, 211, 211, 0.3);
+    background-color: rgba(72, 70, 70, 0.9);
+    
 }
-
+.gallery{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.gallery__image{
+   width: 250px;
+   height: 400px;
+   object-fit: cover;
+   border-radius: 5px;
+}
+.gallery__image:hover{
+    transform: scale(101%);
+}
 @media screen and (max-width: 900px) {
     .logo-img{
         width: 400px;
@@ -158,12 +177,13 @@ img{
     }
     .modal-win {
         width: var(--modal-width);
-        min-height: var(--modal-height);
+        height: var(--modal-height);
         padding: 30px;
         background-color: white;
         border-radius: 10px;
-        transform: translate(calc(50vw - var(--modal-width) / 2), calc(50vh - var(--modal-height) / 2));
+        transform: translate(calc(50vw - var(--modal-width) / 1.9), calc(50vh - var(--modal-height) / 1.8));
         position: relative;
+        overflow-y: scroll;
     }
     .modal-svg-x{
         top: 10px;

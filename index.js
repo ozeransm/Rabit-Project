@@ -9,9 +9,10 @@ let modalContent;
 btnMenu.forEach((el, i) => {
     el.addEventListener('click', function handlerBtn() {
         modal.classList.toggle("visually-hidden");
+        document.body.style.overflow = 'hidden';    
         switch (i) {
             case 0: modalContent = document.querySelector(".div-modal-contact");
-                    document.documentElement.style.setProperty('--modal-width', '300px');
+                    document.documentElement.style.setProperty('--modal-width', '200px');
                     document.documentElement.style.setProperty('--modal-height', '250px');
                     break;
             case 1: modalContent = document.querySelector(".div-modal-order");
@@ -28,7 +29,14 @@ btnMenu.forEach((el, i) => {
 })
 })
 
-iconX.addEventListener('click', function handlerX() {
+function handlerX() {
     modal.classList.toggle("visually-hidden");
-    modalContent.classList.toggle("visually-hidden");
-})
+        modalContent.classList.toggle("visually-hidden");
+        document.body.style.overflow = 'auto';
+}
+document.addEventListener('keydown', function(event) {
+  if (event.key === "Escape") {
+    handlerX();
+  }
+});
+iconX.addEventListener('click', handlerX);
