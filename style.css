@@ -115,6 +115,7 @@ img{
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 15px;
+    
 }
 .gallery__image{
    width: 250px;
@@ -126,8 +127,9 @@ img{
     transform: scale(101%);
 }
 
-.div-modal-order{
+.order-card{
     padding: 10px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -135,6 +137,7 @@ img{
     border: 1px solid gray;
     border-radius: 20px;
 }
+
 .swiper {
     width: 250px;
     height: 333px;
@@ -206,16 +209,14 @@ img{
     }
     .modal-win {
         width: var(--modal-width);
-        height: var(--modal-height);
+        max-height: var(--modal-height);
         padding: 30px;
         background-color: white;
         border-radius: 10px;
         transform: translate(calc(50vw - var(--modal-width) / 1.9), calc(50vh - var(--modal-height) / 1.8));
         position: relative;
         overflow-y: scroll;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
     }
     .modal-svg-x{
         top: 10px;
