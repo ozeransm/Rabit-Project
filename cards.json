@@ -1,0 +1,25 @@
+{
+   "cards": [
+                {
+                    "id": "toy-1",
+                    "name": "",
+                    "price": 30,
+                    "description": "",
+                    "img": ["./img/galery/1714463088171.jpg", "./img/galery/1714463088173.jpg", "./img/galery/1714463088180.jpg"]
+                },
+                {
+                    "id": "toy-2",
+                    "name": "",
+                    "price": 30,
+                    "description": "",
+                    "img": ["./img/galery/1714463088171.jpg", "./img/galery/1714463088173.jpg", "./img/galery/1714463088180.jpg"]
+                },
+                {
+                    "id": "toy-3",
+                    "name": "",
+                    "price": 30,
+                    "description": "",
+                    "img": ["./img/galery/1714463088171.jpg", "./img/galery/1714463088173.jpg", "./img/galery/1714463088180.jpg"]
+                }
+            ]
+}
