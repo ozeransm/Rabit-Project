@@ -7,6 +7,7 @@ const btnAddOrder = [];
 const widthScreen = window.innerWidth;
 const heightScreen = window.innerHeight;
 const lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+let sel = [];
 let modalContent;
 let cards = [];
 let shopCard = [];
@@ -33,7 +34,11 @@ loadJSON('cards.json', function(data) {
   
   let card = '';
   cards = data.cards;
-  data.cards.map(el => {
+  if (sel.length === 0) {
+    sel.length = data.cards.length;
+    sel.fill(1);
+  }
+  data.cards.map((el, i) => {
     card += `
                 <div class="order-card">
             <div class="initswiper">
@@ -60,12 +65,12 @@ loadJSON('cards.json', function(data) {
                 <span id="toyBprice">60</span>
                 <label for="toyBselect">quantity:</label>
                 <select id="quantity-${el.id}" name="toyBselect">
-                    <option value="0">0</option>
-                    <option value="1" selected>1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="0" ${sel[i]===0 ? 'selected' : ''}>0</option>
+                    <option value="1" ${sel[i]===1 ? 'selected' : ''}>1</option>
+                    <option value="2" ${sel[i]===2 ? 'selected' : ''}>2</option>
+                    <option value="3" ${sel[i]===3 ? 'selected' : ''}>3</option>
+                    <option value="4" ${sel[i]===4 ? 'selected' : ''}>4</option>
+                    <option value="5" ${sel[i]===5 ? 'selected' : ''}>5</option>
                 </select>
                 <button type="button" id="${el.id}">Add</button>
             </div>
@@ -153,8 +158,8 @@ modal.addEventListener('click', function (event) {
 
 function handlerBtnToy(e) {
   const quantityOrder = document.querySelector(`#quantity-${e.target.id}`);
-  console.log(quantityOrder.options[Number(quantityOrder.value)]);
-  quantityOrder.options[Number(quantityOrder.value)].selected = true;
+  sel[parseInt(e.target.id.split('-')[1])] = Number(quantityOrder.value);
+  
   const card = { ...cards.filter(el => el.id === e.target.id)[0], quantity: quantityOrder.value, summ: 0 };
   if (shopCard.length === 0) shopCard.push(card)
     else {
