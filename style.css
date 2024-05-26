@@ -12,6 +12,12 @@ body{
 img{
     display: block;
 }
+label{
+    display: block;
+}
+input{
+    display: block;
+}
 .modal-svg-x{
     width: 24px;
     height: 24px;
