@@ -163,6 +163,11 @@ input{
     height: 250px;
     padding: 15px;
 }
+.title-deleted{
+    font-size: 20px;
+    font-weight: 500;
+    
+}
 @media screen and (max-width: 900px) {
     .logo-img{
         width: 400px;

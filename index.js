@@ -13,24 +13,24 @@ let cards = [];
 let shopCard = [];
 
 function createCards(modalContent) {
-    
-  function loadJSON(path, callback) {
-    fetch(path)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Не вдалося завантажити файл');
-            }
-            return response.json();
-        })
-        .then(data => {
-            callback(data);
-        })
-        .catch(error => {
-            console.error('Помилка:', error);
-        });
-}
-
-loadJSON('cards.json', function(data) {
+  async function loadJSON(callback) {
+    try {
+                
+      const response = await fetch('http://127.0.0.1:3000');
+        
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+        
+      callback(await response.json());
+      
+             
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }  
+  
+loadJSON(function(data) {
   
   let card = '';
   cards = data.cards;
@@ -60,9 +60,10 @@ loadJSON('cards.json', function(data) {
             </div>
             <div class="order-description">
                 <h3>Description:</h3>
-                <p id="toyBname">Fluffy bunny</p>
+                <p>${el.description}</p>
+                <p id="toyBname">${el.name}</p>
                 <span id="toyBpriceTitle">price</span>
-                <span id="toyBprice">60</span>
+                <span id="toyBprice">${el.price}</span>
                 <label for="toyBselect">quantity:</label>
                 <select id="quantity-${el.id}" name="toyBselect">
                     <option value="0" ${sel[i]===0 ? 'selected' : ''}>0</option>
