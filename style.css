@@ -18,14 +18,16 @@ label{
 input{
     display: block;
 }
-.modal-svg-x{
+.modal-svg-x,
+.main-modal-svg-x{
     width: 24px;
     height: 24px;
     position: absolute;
     color: dimgrey;
   
 }
-.modal-svg-x:hover{
+.modal-svg-x,
+.main-modal-svg-x:hover{
     color: gray;
    
 }
@@ -107,12 +109,14 @@ input{
 .btn-menu:hover{
     transform: scale(105%);
 }
-.modal{
-    position: absolute;
+.modal,
+.main-modal{
+    z-index: 100;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(72, 70, 70, 0.9);
     
 }
@@ -218,7 +222,8 @@ input{
         color: dimgray;
         background-color: rgba(229, 229, 225, 0.75);
     }
-    .modal-win {
+    .modal-win,
+    .main-modal-win {
         width: var(--modal-width);
         max-height: var(--modal-height);
         padding: 30px;
@@ -229,7 +234,8 @@ input{
         overflow-y: scroll;
         
     }
-    .modal-svg-x{
+    .modal-svg-x,
+    .main-modal-svg-x{
         top: 10px;
         left: calc(var(--modal-width) + 25px);
     }

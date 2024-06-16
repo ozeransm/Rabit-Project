@@ -46,7 +46,7 @@ loadJSON(function(data) {
                     <div class="swiper-wrapper">
                                 ${el.img.reduce((akk, val) => akk +
       `<div class="swiper-slide">
-                                     <img class="sw-img" src="${val}" alt="">
+                                     <img class="sw-img" src="http://localhost:3000/public/images/${val}" alt="">
                                   </div>`
       , '')}
                                                 
@@ -153,7 +153,7 @@ function handlerX() {
 }
 
 modal.addEventListener('click', function (event) {
-    if (event.target.className === "modal") handlerX();
+  if (event.target.className === "modal") handlerX();
 });
   
 
