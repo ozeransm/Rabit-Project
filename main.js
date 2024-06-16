@@ -38,7 +38,7 @@ async function saveJSON(data, del = 0, sendF = 0) {
             }
         };
 
-    urlStr = sendF === 0 ? 'http://localhost:3000' : 'http://localhost:3000/upload';
+    urlStr = sendF === 0 ? 'https://quixotic-nutritious-quicksand.glitch.me/' : 'https://quixotic-nutritious-quicksand.glitch.me/upload';
 
     try {
         const response = await fetch(urlStr, {
@@ -161,7 +161,7 @@ async function loadJSON(callback) {
     
     try {
                 
-        const response = await fetch('http://localhost:3000');
+        const response = await fetch('https://quixotic-nutritious-quicksand.glitch.me/');
         
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -181,7 +181,7 @@ function createCardHtml(el) {
                     <div class="swiper-wrapper">
                                 ${el.img.reduce((akk, val) => akk +
             `                       <div class="swiper-slide">
-                                        <img class="sw-img" src="http://localhost:3000/public/images/${val}" alt="">
+                                        <img class="sw-img" src="https://quixotic-nutritious-quicksand.glitch.me/public/images/${val}" alt="">
                                     </div>`, '')}
                                                 
                     </div>

@@ -16,7 +16,7 @@ function createCards(modalContent) {
   async function loadJSON(callback) {
     try {
                 
-      const response = await fetch('http://127.0.0.1:3000');
+      const response = await fetch('https://quixotic-nutritious-quicksand.glitch.me/');
         
       if (!response.ok) {
         throw new Error('Network response was not ok');
